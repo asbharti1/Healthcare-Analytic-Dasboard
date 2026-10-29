@@ -1,0 +1,65 @@
+{
+  "source_rows": 240886,
+  "analysis_rows": 240806,
+  "summary_rows_excluded": 80,
+  "exact_duplicates": 0,
+  "missing_estimate": 0,
+  "missing_county_name": 0,
+  "missing_geolocation": 0,
+  "missing_confidence_bounds": 0,
+  "invalid_estimate_out_of_range": 0,
+  "county_count": 3144,
+  "state_count": 51,
+  "measure_count": 40,
+  "years": [
+    2021,
+    2022
+  ],
+  "estimate_types": [
+    "Age-adjusted prevalence",
+    "Crude prevalence"
+  ],
+  "source_missing_by_column": {
+    "LocationName": {
+      "count": 80,
+      "percent": 0.033
+    },
+    "Data_Value_Footnote_Symbol": {
+      "count": 240872,
+      "percent": 99.994
+    },
+    "Data_Value_Footnote": {
+      "count": 240872,
+      "percent": 99.994
+    },
+    "Geolocation": {
+      "count": 80,
+      "percent": 0.033
+    }
+  },
+  "source": "https://data.cdc.gov/d/fu4u-a9bh",
+  "cleaning": [
+    "read the public source CSV as UTF-8",
+    "coerced estimate and confidence interval values to numeric",
+    "excluded 80 U.S.-level summary rows from county comparisons",
+    "kept crude and age-adjusted values separate",
+    "preserved missing values and zero estimates",
+    "reported but did not drop exact duplicates",
+    "validated prevalence estimate values against 0\u2013100 percent range"
+  ],
+  "default_view": {
+    "measure": "Diagnosed diabetes among adults",
+    "year": 2022,
+    "estimate_type": "Crude prevalence",
+    "county_rows": 3144,
+    "mean_county_estimate_pct": 13.504,
+    "county_min_pct": 5.1,
+    "county_min": "Madison, Idaho",
+    "county_max_pct": 26.0,
+    "county_max": "Kenedy, Texas",
+    "lowest_state_mean": "District of Columbia",
+    "lowest_state_mean_pct": 7.9,
+    "highest_state_mean": "West Virginia",
+    "highest_state_mean_pct": 16.815
+  }
+}

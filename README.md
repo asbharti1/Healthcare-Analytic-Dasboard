@@ -40,7 +40,7 @@ You have **two seamless options** to view and share the finished dashboard:
 
 ### Option 2: Full Python Streamlit Application (`app.py`)
 
-If you want to run the full Python analytics environment with live Pandas filtering:
+If you want to run the full Python analytics environment with live Pandas filtering locally:
 
 ```powershell
 # 1. Activate virtual environment (if using one)
@@ -53,6 +53,20 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 Open your browser at `http://localhost:8501`.
+
+### Option 3: Live Cloud Deployment on Render (`render.com`)
+
+This repository includes `render.yaml`, `runtime.txt`, and `.streamlit/config.toml` ready for 1-click cloud hosting:
+
+1. Log in to [Render Dashboard](https://dashboard.render.com).
+2. Click **New +** -> **Web Service**.
+3. Connect your GitHub repository: `asbharti1/Healthcare-Analytic-Dasboard`.
+4. Configure service settings:
+   - **Runtime**: `Python 3`
+   - **Build Command**: `pip install -r requirements.txt`
+   - **Start Command**: `streamlit run app.py --server.port $PORT --server.address 0.0.0.0`
+   - **Instance Type**: `Free`
+5. Click **Create Web Service**. Render builds the app and provisions your live `.onrender.com` URL.
 
 ---
 
